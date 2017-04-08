@@ -1,3 +1,6 @@
+## 0.4.6
+- Support MessagePack
+
 ## 0.4.5
 - Support other specs directory than spec/requests (Thx @joe-re)
 
