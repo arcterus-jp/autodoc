@@ -121,7 +121,7 @@ module Autodoc
         @request_body = begin
           case
           when request.try(:content_type) == "multipart/form-data"
-            "multipart/form-data"
+            "multipart/form-data parameters: #{request.try(:params)}"
           when request.headers["Content-Type"].try(:include?, "application/json")
             request_body_parsed_as_json
           else
