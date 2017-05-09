@@ -4,6 +4,7 @@ require "active_support/core_ext/string/strip"
 require "uri"
 require "erb"
 require "pathname"
+require "msgpack"
 
 module Autodoc
   class Document
@@ -159,6 +160,8 @@ module Autodoc
             response.header["Content-Type"]
           when response.header["Content-Type"].try(:include?, "application/json")
             response_body_parsed_as_json
+          when response.header["Content-Type"].try(:include?, "application/mpac")
+            JSON.pretty_generate(MessagePack.unpack(response.body))
           else
             response.body
           end
