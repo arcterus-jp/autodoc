@@ -1,3 +1,10 @@
+## 0.6.2-arcterus
+
+- MessagePack support
+- multipart/form-data request parameters support
+- Change document template
+- Deflate support
+
 ## 0.6.2
 
 - Support multibyte query parameters (Thx @hiroki-uchida)
