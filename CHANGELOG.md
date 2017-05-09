@@ -1,3 +1,8 @@
+## 0.6.1
+- MessagePack support
+- multipart/form-data request parameters support
+- Change document template
+
 ## 0.6.0
 - Change the message capitalization rule (Thx @k0kubun)
 
