@@ -166,6 +166,8 @@ module Autodoc
             response_body_parsed_as_json
           when response.header["Content-Type"].try(:include?, "application/mpac")
             JSON.pretty_generate(MessagePack.unpack(response.body))
+          when response.header["Content-Encoding"].try(:include?, "deflate")
+            Zlib::Inflate.inflate(response.body).force_encoding('UTF-8')
           else
             response.body
           end
