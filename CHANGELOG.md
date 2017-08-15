@@ -1,3 +1,6 @@
+## 0.6.2a
+- Deflate support
+
 ## 0.6.1
 - MessagePack support
 - multipart/form-data request parameters support
