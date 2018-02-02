@@ -1,3 +1,6 @@
+## 0.6.2b
+- Update MessagePack version
+
 ## 0.6.2a
 - Deflate support
 
